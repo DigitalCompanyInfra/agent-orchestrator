@@ -5,12 +5,12 @@
   "description": "Expo mobile supervisor for Agent Orchestrator",
   "main": "expo-router/entry",
   "scripts": {
-    "start": "expo start",
-    "start:perf": "expo start --dev-client --no-dev --minify",
+    "start": "node init && expo start",
+    "start:perf": "node init && expo start --dev-client --no-dev --minify",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "typecheck": "tsc --noEmit",
-    "build": "npm run typecheck",
+    "build": "node init && npm run typecheck",
     "postinstall": "patch-package",
     "test": "vitest run"
   },
